@@ -5,13 +5,15 @@ set /p rmpkg=Pkg_name:
 if  %rmpkg%==* (
     goto warning2
 ) else (
-    goto uninstall
+    goto check2
 )
+:check2
 if  %rmpkg%==MTOS_SHELL (
     goto warning
 ) else (
-    goto uninstall
+    goto check3
 )
+:check3
 if exist %rmpkg%.bat (
     goto uninstall
 ) else (
