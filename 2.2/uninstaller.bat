@@ -2,20 +2,20 @@
 echo Witaj w uninstaller! (Version 2.0)
 echo Podaj nazwe pakietu który chcesz usunąć! UWAGA: ABY ZACHOWAĆ STABILNOŚĆ SYSTEMU NIE USUWAJ PAKIETÓW SYSTEMOWYCH. 
 set /p rmpkg=Pkg_name:
-if exist %rmpkg%.bat (
-    goto uninstall
+if  %rmpkg%==* (
+    goto warning2
 ) else (
-    echo invalid choose && goto exit
+    goto uninstall
 )
 if  %rmpkg%==MTOS_SHELL (
     goto warning
 ) else (
     goto uninstall
 )
-if  %rmpkg%==* (
-    goto warning2
-) else (
+if exist %rmpkg%.bat (
     goto uninstall
+) else (
+    echo invalid choose && goto exit
 )
 
 :warning
