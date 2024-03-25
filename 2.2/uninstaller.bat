@@ -1,4 +1,5 @@
 :start
+set syspkgdel=1
 echo Witaj w uninstaller! (Version 2.0)
 echo Podaj nazwe pakietu który chcesz usunąć! UWAGA: ABY ZACHOWAĆ STABILNOŚĆ SYSTEMU NIE USUWAJ PAKIETÓW SYSTEMOWYCH. 
 set /p rmpkg=Pkg_name:
