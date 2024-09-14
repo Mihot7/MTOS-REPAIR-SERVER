@@ -1,7 +1,7 @@
 @echo off
 rem     │     ─   └    ┘    ┌    ┐    ┤    ├    ┼    ┴    ┬
 set kernel=sys
-set shell=MTOS_SHELL
+set shell=2shell
 chcp 65001
 cd system
 call SendKey "{f11}"
